@@ -1,6 +1,5 @@
 /**
  * 网站文章内容搜索功能实现
- * Copyright (C) 2020 knightyun. <https://github.com/knightyun/knightyun.github.io/assets/js/search.js>
  * @todo 多关键词搜索
  */
 
@@ -29,10 +28,10 @@ var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
         var xml = xhr.responseXML;
-        
+
         arrItems = xml.getElementsByTagName('item');
         itemLength = arrItems.length;
-        
+
         // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
         // 同时过滤掉 HTML 标签
         for (i = 0; i < itemLength; i++) {
@@ -118,7 +117,7 @@ function searchMatching(arr1, arr2, input) {
             // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
             var l = input.toString().length - 3;
             var step = 10;
-            
+
             // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
             arrResults.push(arr[i].slice(indexContent - step, indexContent) +
                 '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +

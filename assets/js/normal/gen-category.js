@@ -1,6 +1,5 @@
 /**
  * 文章页面生成侧栏目录
- * Copyright (C) 2020 knightyun. <https://github.com/knightyun/knightyun.github.io/assets/js/gen-category.js>
  */
 var categories = postContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
@@ -9,7 +8,7 @@ if (categories.length > 0) { // 文章存在标题
         categoryBtn = document.querySelector('.category-btn');
     var li = document.createElement('li'),
         a = document.createElement('a');
-    
+
     a.className = 'waves-effect';
     // 存在目录则显示目录按钮和侧栏
     category.classList.remove('hide');

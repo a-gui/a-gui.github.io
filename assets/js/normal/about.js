@@ -1,6 +1,5 @@
 /**
  * 个性化展示个人介绍功能实现
- * Copyright (C) 2020 knightyun. <https://github.com/knightyun/knightyun.github.io/assets/js/about.js>
  */
 
 var elTypingText = document.querySelector('.typing-text');
@@ -106,7 +105,7 @@ async function deletingText(el, delInterval) {
 	// 创建光标
 	var cursor = document.createElement('span');
 	var len = el.innerText.length;
-	
+
 	// for (let i = len; i > 0; i--) {
 	for (let i = 0; i < len; i++) {
 		// 删除中停止闪烁光标
